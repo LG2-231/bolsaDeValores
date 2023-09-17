@@ -1,18 +1,13 @@
-## Getting Started
+## Projeto LG2
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Aplicação na linguagem java para simular um pregão na bolsa de valores.
 
-## Folder Structure
+## Participantes
 
-The workspace contains two folders by default, where:
+- Leonardo Souza
+- Maysa Vieira
+- Mirella Dias
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+## Turma
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+`231B`
