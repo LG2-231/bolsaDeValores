@@ -1,7 +1,13 @@
 package bolsadevalores.ativos;
 
+import bolsadevalores.Empresa;
+
 public class AcoesPreferenciais extends Ativos{
-    public AcoesPreferenciais (String nome, String tipoAtivo, double preco) {
-        super(nome, tipoAtivo, preco);
+    int codigo;
+
+    public AcoesPreferenciais (String nome, String tipoAtivo, double preco, Empresa empresa, int codigo) {
+        super(nome, tipoAtivo, preco, empresa);
+        this.codigo = 4;
     }
+    
 }

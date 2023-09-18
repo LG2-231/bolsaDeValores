@@ -3,7 +3,7 @@ package bolsadevalores.ordem;
 import bolsadevalores.Investidor;
 import bolsadevalores.ativos.Ativos;
 
-public class Ordem {
+public abstract class Ordem {
     private Investidor investidor;
     private Ativos ativo;
     private String tipoOrdem;
@@ -18,6 +18,23 @@ public class Ordem {
         this.preco = preco;
     }
 
-    // Construtor, getters e setters
-    // Outros métodos relevantes
+    public Investidor getInvestidor() {
+        return investidor;
+    }
+
+    public Ativos getAtivos() {
+        return ativo;
+    }
+
+    public String getTipoOrdem() {
+        return tipoOrdem;
+    }
+    
+    public int getQuantidade() {
+        return quantidade;
+    }
+
+    public double getPreco() {
+        return preco;
+    }
 }

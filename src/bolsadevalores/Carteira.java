@@ -14,5 +14,15 @@ public class Carteira {
         this.ativos = new ArrayList<>();
     }
 
-    // Outros atributos e métodos relevantes
+    public void adicionarAtivo(Ativos ativo) {
+        ativos.add(ativo);
+    }
+    
+    public void removerAtivo(Ativos ativo) {
+        ativos.remove(ativo);
+    }
+
+    public Investidor getInvestidor() {
+        return investidor;
+    }
 }

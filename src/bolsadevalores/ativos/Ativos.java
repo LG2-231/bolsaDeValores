@@ -1,22 +1,38 @@
 package bolsadevalores.ativos;
 
-import java.util.ArrayList;
-import java.util.List;
+import bolsadevalores.Empresa;
 
-public class Ativos {
+public abstract class Ativos {
     private String nome;
     private String tipoAtivo;
     private double preco;
-    private List<Double> historicoPrecos;
+    private Empresa empresa;
 
-    public Ativos (String nome, String tipoAtivo, double preco) {
+    public Ativos (String nome, String tipoAtivo, double preco, Empresa empresa) {
         this.nome = nome;
         this.tipoAtivo = tipoAtivo;
         this.preco = preco;
-        this.historicoPrecos = new ArrayList<>();
+        this.empresa = empresa;
     }
 
-    // Construtor, getters e setters
-    // Outros métodos relevantes
+    public String getNome() {
+        return nome;
+    }
+    
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getTipoAtivo() {
+        return tipoAtivo;
+    }
+    
+    public double getPreco() {
+        return preco;
+    }
+
+    public Empresa getEmpresa() {
+        return empresa;
+    }
 }
 

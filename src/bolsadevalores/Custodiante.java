@@ -13,4 +13,12 @@ public class Custodiante {
         this.nome = nome;
         this.ativosCustodiados = new ArrayList<>();
     }
+
+    public String getNome() {
+        return nome;
+    }
+    
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
 }
