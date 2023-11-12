@@ -164,5 +164,3 @@ public class Bolsa {
         scanner.close();
     }
 }
-
-//add ativo na carteira, criar histórico
