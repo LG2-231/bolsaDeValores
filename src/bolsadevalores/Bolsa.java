@@ -10,6 +10,7 @@ public class Bolsa {
         Investidor I1 = new Investidor("João Silva", "309.163.843-80");
 
         Carteira C1 = new Carteira(I1);
+        I1.adicionarCarteira(C1);
 
         Corretora ITAU = new Corretora("Itau");
         ITAU.addCliente(I1);
@@ -21,6 +22,8 @@ public class Bolsa {
         AcoesPreferenciais acao2 = new AcoesPreferenciais("AZUL", 1500.0, AZUL);
     
         Pregao pregao = new Pregao();
+
+        Historico H1 = new Historico();
 
         Scanner scanner = new Scanner(System.in);
 
@@ -54,6 +57,12 @@ public class Bolsa {
                         Corretora.emitirOrdem(Od1);
 
                         Transacao T1 = new Transacao(Od1);
+
+                        C1.adicionarAtivo(acao1);
+
+                        H1.addTransacao(T1);
+                        System.out.println(H1);
+
                     } else {
                         System.out.println("Operação encerrada");
                     }
@@ -72,7 +81,12 @@ public class Bolsa {
                         Ordem Od2 = new Ordem(I1, acao2, "compra", 1, 1500.0);
                         Corretora.emitirOrdem(Od2);
 
-                        Transacao T1 = new Transacao(Od2);
+                        Transacao T2 = new Transacao(Od2);
+
+                        C1.adicionarAtivo(acao2);
+
+                        H1.addTransacao(T2);
+                        System.out.println(H1);
                     } else {
                         System.out.println("Operação encerrada");
                     }
@@ -104,7 +118,12 @@ public class Bolsa {
                         Ordem Od3 = new Ordem(I1, acao1, "venda", 1, 2500.0);
                         Corretora.emitirOrdem(Od3);
 
-                        Transacao T1 = new Transacao(Od3);
+                        Transacao T3 = new Transacao(Od3);
+
+                        C1.adicionarAtivo(acao1);
+
+                        H1.addTransacao(T3);
+                        System.out.println(H1);
                     } else {
                         System.out.println("Operação encerrada");
                     }
@@ -123,7 +142,11 @@ public class Bolsa {
                         Ordem Od4 = new Ordem(I1, acao2, "venda", 1, 1500.0);
                         Corretora.emitirOrdem(Od4);
 
-                        Transacao T1 = new Transacao(Od4);
+                        Transacao T4 = new Transacao(Od4);
+                        C1.adicionarAtivo(acao2);
+
+                        H1.addTransacao(T4);
+                        System.out.println(H1);
                     } else {
                         System.out.println("Operação encerrada");
                     }
@@ -140,6 +163,6 @@ public class Bolsa {
 
         scanner.close();
     }
-} 
+}
 
 //add ativo na carteira, criar histórico
