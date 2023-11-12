@@ -5,9 +5,12 @@ import bolsadevalores.Empresa;
 public class AcoesPreferenciais extends Ativos{
     int codigo;
 
-    public AcoesPreferenciais (String nome, String tipoAtivo, double preco, Empresa empresa, int codigo) {
-        super(nome, tipoAtivo, preco, empresa);
+    public AcoesPreferenciais (String nome, double preco, Empresa empresa) {
+        super(nome, preco, empresa);
         this.codigo = 4;
     }
     
+    public int getCodigo() {
+        return codigo;
+    }
 }

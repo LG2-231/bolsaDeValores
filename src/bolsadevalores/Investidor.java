@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import bolsadevalores.estruturas.Pilha;
-import bolsadevalores.ordem.Ordem;
 
 public class Investidor {
     private String nome;

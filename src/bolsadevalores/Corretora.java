@@ -3,29 +3,37 @@ package bolsadevalores;
 import java.util.ArrayList;
 import java.util.List;
 
-import bolsadevalores.ordem.Ordem;
+import bolsadevalores.estruturas.Fila;
 
 public class Corretora {
     private String nome;
-    private List<Ordem> ordens;
+    private static List<Ordem> ordens;
     private List<Investidor> clientes;
-
+    private Fila<Ordem> ordensPendentes;    
+    
     public Corretora(String nome){
         this.nome = nome;
-        this.ordens = new ArrayList();
+        this.ordens = new ArrayList<>();
         this.clientes = new ArrayList<>();
     }
     
     public void addCliente(Investidor cliente) {
         clientes.add(cliente);
     }
-
+    
     public void removerCliente(Investidor cliente) {
         clientes.remove(cliente);
     }
-
-    public void adicionarOrdem(Ordem ordem) {
+    
+    public static void emitirOrdem(Ordem ordem) {
         ordens.add(ordem);
+    }
+
+    public void processarOrdens() {
+        while (!ordensPendentes.isEmpty()) {
+            Ordem ordem = ordensPendentes.desenfileirar();
+            
+        }
     }
 
     public String getNome() {

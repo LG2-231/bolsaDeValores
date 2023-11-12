@@ -1,18 +1,17 @@
-package bolsadevalores.ordem;
+package bolsadevalores;
 
-import bolsadevalores.Investidor;
 import bolsadevalores.ativos.Ativos;
 
-public abstract class Ordem {
+public class Ordem {
     private Investidor investidor;
-    private Ativos ativo;
+    private Ativos acao;
     private String tipoOrdem;
     private int quantidade;
     private double preco;
 
-    public Ordem (Investidor investidor, Ativos ativo, String tipoOrdem, int quantidade, double preco) {
+    public Ordem (Investidor investidor, Ativos acao, String tipoOrdem, int quantidade, double preco) {
         this.investidor = investidor;
-        this.ativo = ativo;
+        this.acao = acao;
         this.tipoOrdem = tipoOrdem;
         this.quantidade = quantidade;
         this.preco = preco;
@@ -23,7 +22,7 @@ public abstract class Ordem {
     }
 
     public Ativos getAtivos() {
-        return ativo;
+        return acao;
     }
 
     public String getTipoOrdem() {
